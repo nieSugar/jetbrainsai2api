@@ -1,0 +1,16 @@
+# wrangler.toml
+name = "jetbrains-openai-wrapper"
+main = "worker.js"
+compatibility_date = "2025-07-04"
+
+# Environment variable definitions. Replace values with your own secrets.
+[vars]
+CLIENT_API_KEYS = "sk-your-custom-key-here"
+JETBRAINS_JWTS   = "your-jwt-here"
+MODELS           = "anthropic-claude-3.5-sonnet"
+
+# Optionally define additional environments, e.g. `production` with real secrets.
+#[env.production.vars]
+#CLIENT_API_KEYS = "sk-prod-key-1,sk-prod-key-2"
+#JETBRAINS_JWTS = "prod-jwt-1,prod-jwt-2"
+#MODELS = "anthropic-claude-3.5-sonnet,other-model"

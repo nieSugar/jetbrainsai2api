@@ -172,4 +172,39 @@ jetbrainsai2api/
 **如果这个项目对您有帮助，请考虑给个 ⭐ Star！**
 
 [![Star History Chart](https://api.star-history.com/svg?repos=oDaiSuno/jetbrainsai2api&type=Date)](https://www.star-history.com/#oDaiSuno/jetbrainsai2api&Date)
-</div> 
+</div>
+
+## Cloudflare Worker Version
+
+This repository now ships with a fully-featured **JavaScript Cloudflare Worker** that exposes the same OpenAI-compatible endpoints as the original FastAPI server.
+
+### Quick start
+
+1.  Install the Wrangler CLI (if you don't already have it):
+
+    ```bash
+    npm install -g wrangler
+    ```
+
+2.  Update the variables in `wrangler.toml` with **your** client API keys, JetBrains JWTs, and the list of model IDs you want to expose.
+
+3.  Deploy to your Cloudflare account:
+
+    ```bash
+    wrangler deploy
+    ```
+
+4.  Call the API:
+
+    ```bash
+    curl -H "Authorization: Bearer sk-your-custom-key-here" \
+         -H "Content-Type: application/json" \
+         https://<your-worker-subdomain>.workers.dev/v1/models
+    ```
+
+### Endpoints
+
+* `GET  /v1/models` – List available models.
+* `POST /v1/chat/completions` – Chat completion endpoint, supports `stream=true` for Server-Sent Events.
+
+The response schema and streaming format are identical to OpenAI's official API, so the worker can be dropped into any existing client with just a base-URL change. 
