@@ -1,5 +1,7 @@
 [
     {
-        "jwt": "your-jwt-here-1"
+        "jwt": "your-jwt-here-1",
+        "licenseId": "Oxxxx",
+        "authorization": "eyJhbGcxxx"
     }
 ]

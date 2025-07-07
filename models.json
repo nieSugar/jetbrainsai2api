@@ -1,12 +1,18 @@
-[
-    "anthropic-claude-3.7-sonnet",
-    "anthropic-claude-4-sonnet",
-    "google-chat-gemini-pro-2.5",
-    "openai-o4-mini",
-    "openai-o3-mini",
-    "openai-o3",
-    "openai-o1",
-    "openai-gpt-4o",
-    "anthropic-claude-3.5-sonnet",
-    "openai-gpt4.1"
-]
+{
+    "models": [
+        "anthropic-claude-3.7-sonnet",
+        "anthropic-claude-4-sonnet",
+        "google-chat-gemini-pro-2.5",
+        "openai-o4-mini",
+        "openai-o3-mini",
+        "openai-o3",
+        "openai-o1",
+        "openai-gpt-4o",
+        "anthropic-claude-3.5-sonnet",
+        "openai-gpt4.1"
+    ],
+    "anthropic_model_mappings": {
+        "claude-sonnet-4-20250514": "anthropic-claude-4-sonnet",
+        "claude-3-5-haiku-20241022": "anthropic-claude-3.5-sonnet"
+    }
+}
